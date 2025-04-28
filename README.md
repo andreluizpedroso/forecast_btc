@@ -129,4 +129,4 @@ Projeto desenvolvido para a **Pós-Tech - Tech Challenge Fase 3**.
 ---
 
 # 🚀 Vamos prever o futuro! 📈
-(https://forecastbtc-avsfpfw2sf5vn5ohxcrqhr.streamlit.app/)
+(https://forecastbtc-jisdg7mfjdwzjngbr6suwq.streamlit.app/)
