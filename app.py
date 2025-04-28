@@ -94,11 +94,11 @@ def plotar_forecast(full_data, target_date):
 # Streamlit App
 # ==========================================
 
-st.set_page_config(page_title="Previsão Financeira com LSTM", layout="wide")
-st.title("📊 Previsão de Preços Financeiros com LSTM")
+st.set_page_config(page_title="Previsão Financeira Ibovespa", layout="wide")
+st.title("📊 Previsão de Preços Financeiros Ibovespa")
 
 # Seletor de ativo (só um por enquanto)
-ticker = 'BTC-USD'
+ticker = '^BVSP'
 
 # Carregar dados
 data = carregar_dados_historicos(ticker)
@@ -129,7 +129,21 @@ else:
 
 # Input do usuario
 st.sidebar.header("Configuração de Previsão")
-target_date = st.sidebar.date_input("Escolha uma data futura para previsão:")
+
+# Definir limites de datas permitidas
+last_known_date = pd.to_datetime(data['Date'].iloc[-1])
+start_prediction_date = last_known_date + pd.Timedelta(days=1)
+end_prediction_date = last_known_date + pd.Timedelta(days=30)
+
+# Criar lista de datas disponíveis - apenas datas (sem hora)
+date_range = pd.date_range(start=start_prediction_date, end=end_prediction_date).date
+
+# Barra de seleção de data
+target_date = st.sidebar.select_slider(
+    "Escolha uma data futura para previsão:",
+    options=date_range,
+    value=date_range[0]
+)
 
 if st.sidebar.button("Gerar Previsão"):
     try:
