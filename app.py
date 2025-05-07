@@ -94,11 +94,23 @@ def plotar_forecast(full_data, target_date):
 # Streamlit App
 # ==========================================
 
-st.set_page_config(page_title="Previsão Financeira Ibovespa", layout="wide")
-st.title("📊 Previsão de Preços Financeiros Ibovespa")
+st.set_page_config(page_title="Previsão Financeira Bitcoin", layout="wide")
+st.title("📊 Previsão do Preço Futuro do Bitcoin")
+
+# Imagem responsiva e centralizada
+from PIL import Image
+
+# Criar layout com 3 colunas
+col1, col2, col3 = st.columns([1, 2, 1])
+
+# Centralizar imagem na coluna do meio
+with col2:
+    image = Image.open("bitcoin_img.png")
+    st.image(image, use_column_width=True)
+    # st.markdown("### 📈 Escolha uma data à esquerda para iniciar a previsão!")
 
 # Seletor de ativo (só um por enquanto)
-ticker = '^BVSP'
+ticker = 'BTC-USD'
 
 # Carregar dados
 data = carregar_dados_historicos(ticker)

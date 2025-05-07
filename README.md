@@ -1,6 +1,7 @@
-# Previsão de Preços do Ibovespa com LSTM
 
-Este projeto utiliza Machine Learning para prever preços futuros do índice **Ibovespa** (`^BVSP`) com base em dados históricos, utilizando redes neurais LSTM.
+# Previsão de Preços do Bitcoin com LSTM
+
+Este projeto utiliza Machine Learning para prever preços futuros do **Bitcoin** (`BTC-USD`) com base em dados históricos, utilizando redes neurais LSTM.  
 Além disso, o projeto gera uma recomendação automática de **Compra** ou **Aguardar** baseada em médias móveis.
 
 ---
@@ -20,7 +21,7 @@ Além disso, o projeto gera uma recomendação automática de **Compra** ou **Ag
 
 ## 🎯 Objetivo do Projeto
 
-- Coletar dados históricos do Ibovespa via Yahoo Finance e armazenar em um banco de dados SQLite.
+- Coletar dados históricos do Bitcoin via Yahoo Finance e armazenar em um banco de dados SQLite.
 - Treinar um modelo LSTM para previsão de preços.
 - Permitir ao usuário escolher uma data futura para previsão através da interface do Streamlit.
 - Exibir a previsão de preço e uma recomendação automática baseada nas médias móveis de 20 e 80 dias.
@@ -56,6 +57,7 @@ pip install -r requirements.txt
 ```
 Forecast_BTC/
 ├── app.py               # Código principal do projeto (Streamlit)
+├── bitcoin_img.png      # Imagem exibida na interface
 ├── finance.db           # Banco de dados SQLite contendo os históricos
 ├── modelo_lstm.h5       # Modelo LSTM treinado e salvo
 ├── requirements.txt     # Lista de dependências do projeto
@@ -75,12 +77,13 @@ A aplicação abrirá no seu navegador local em `http://localhost:8501`.
 
 ## 🔢 Funcionalidades
 
-- [x] Carregamento e armazenamento de dados do Ibovespa em banco SQLite.
+- [x] Carregamento e armazenamento de dados do Bitcoin em banco SQLite.
 - [x] Treinamento de modelo LSTM.
 - [x] Interface para escolha de data futura com barra de seleção (até 30 dias).
 - [x] Previsão de preço futuro.
 - [x] Recomendacão automática de Compra ou Aguardar.
 - [x] Gráfico interativo com Preços, MM20 e MM80.
+- [x] Imagem centralizada e responsiva na interface.
 
 ---
 
@@ -104,7 +107,6 @@ A aplicação abrirá no seu navegador local em `http://localhost:8501`.
 - Treinado com 70% dos dados históricos.
 - Previsão incremental para datas futuras.
 
-
 ---
 
 ## 📅 Limitações
@@ -116,7 +118,7 @@ A aplicação abrirá no seu navegador local em `http://localhost:8501`.
 
 ## 🌐 Fonte de Dados
 
-- [Yahoo Finance - IBOVESPA (^BVSP)](https://finance.yahoo.com/quote/%5EBVSP)
+- [Yahoo Finance - Bitcoin (BTC-USD)](https://finance.yahoo.com/quote/BTC-USD)
 
 ---
 
@@ -125,8 +127,7 @@ A aplicação abrirá no seu navegador local em `http://localhost:8501`.
 **Andre Luiz Pedroso**  
 Projeto desenvolvido para a **Pós-Tech - Tech Challenge Fase 3**.
 
-
 ---
 
-# 🚀 Vamos prever o futuro! 📈
-(https://forecastbtc-jisdg7mfjdwzjngbr6suwq.streamlit.app/)
+# 🚀 Vamos prever o futuro! 📈  
+[🔗 Acesse o app online](https://forecastbtc-jisdg7mfjdwzjngbr6suwq.streamlit.app/)
