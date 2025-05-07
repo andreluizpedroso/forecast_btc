@@ -106,7 +106,7 @@ col1, col2, col3 = st.columns([1, 2, 1])
 # Centralizar imagem na coluna do meio
 with col2:
     image = Image.open("bitcoin_img.png")
-    st.image(image, use_column_width=True)
+    st.image(image, use_container_width=True)
     # st.markdown("### 📈 Escolha uma data à esquerda para iniciar a previsão!")
 
 # Seletor de ativo (só um por enquanto)
