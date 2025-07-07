@@ -155,17 +155,6 @@ Acesse: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
-## 🎥 Apresentação (Recomendado)
-
-Para entrega do Tech Challenge:
-- Grave um vídeo demonstrando:
-  - A interface Streamlit
-  - A chamada da API via `/prever_auto`
-  - Explicação do modelo e estrutura do projeto
-- Dica: use OBS Studio, Loom ou até o PowerPoint
-
----
-
 ## 👤 Autor
 
 **Andre Luiz Pedroso**  
