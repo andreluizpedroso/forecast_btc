@@ -109,7 +109,7 @@ with col2:
     st.image(image, use_container_width=True)
     # st.markdown("### 📈 Escolha uma data à esquerda para iniciar a previsão!")
 
-# Seletor de ativo (só um por enquanto)
+# Seletor de ativo
 ticker = 'BTC-USD'
 
 # Carregar dados

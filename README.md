@@ -39,7 +39,7 @@ git clone https://github.com/andreluizpedroso/forecast_btc.git
 cd forecast_btc
 
 python -m venv venv
-.venv\Scripts\activate  # Windows
+venv\Scripts\activate  # Windows
 # ou
 source venv/bin/activate  # Linux/Mac
 
