@@ -90,7 +90,9 @@ Abra no navegador: [http://localhost:8501](http://localhost:8501)
 ## 📊 Exemplo de Uso (API FastAPI)
 
 ### Endpoints:
-
+```bash
+uvicorn main:app --reload
+```
 - `GET /` → Verifica status
 - `POST /prever` → Envia JSON com 60 valores históricos
 - `POST /prever_auto` → Faz previsão automática com dados do yFinance
